@@ -1,21 +1,8 @@
 import styled from "styled-components";
-import { FlexCenter } from "../GlobalStyle";
+import { FlexCenter, PageStyle } from "../GlobalStyle";
 
 export const PlanetsStyle = styled.div`
-  padding: 24px 0 28px;
-  justify-content: space-between;
-  ${FlexCenter};
-  flex-direction: column;
-  height: 100%;
-
-  @media screen and (min-width: 768px) {
-    padding: 40px 0 62px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 0;
-    flex-direction: row;
-  }
+  ${PageStyle};
 `;
 
 export const Head = styled.div`
@@ -38,28 +25,6 @@ export const Head = styled.div`
     }
   }
 
-  span {
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 2.7px;
-    margin-right: 18px;
-    opacity: 0.25;
-
-    @media screen and (min-width: 768px) {
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: 3.375px;
-    }
-
-    @media screen and (min-width: 1440px) {
-      font-size: 28px;
-      line-height: 34px;
-      letter-spacing: 4.725px;
-    }
-  }
-
   img {
     margin: 32px 0 26px;
     width: 170px;
@@ -72,7 +37,7 @@ export const Head = styled.div`
     }
 
     @media screen and (min-width: 1440px) {
-      margin: 97px 0 0;
+      margin: 0;
       width: 445px;
       height: 445px;
     }
@@ -84,6 +49,7 @@ export const Tail = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 573px;
+    margin-bottom: 62px;
 
     .planets-h2 {
       margin: 32px 0 8px;
@@ -96,7 +62,7 @@ export const Tail = styled.div`
 
   @media screen and (min-width: 1440px) {
     width: 445px;
-    margin: 97px 0 0;
+    margin: 0;
     
     .planets-h2 {
       margin: 37px 0 14px;

@@ -7,7 +7,7 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <Container>
+    <Container className="home">
       <HeroStyle>
         <Content>
           <Heading5>SO, YOU WANT TO TRAVEL TO</Heading5>

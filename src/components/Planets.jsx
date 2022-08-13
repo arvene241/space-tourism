@@ -21,12 +21,12 @@ export default function Planets() {
   const [active, setActive] = useState(0);
 
   return (
-    <Container>
+    <Container className="page">
+      <Heading5>
+        <span>01</span>pick your destination
+      </Heading5>
       <PlanetsStyle>
         <Head>
-          <Heading5>
-            <span>01</span>pick your destination
-          </Heading5>
           <img
             src={data.destinations[active].images.webp}
             alt={data.destinations[active].name}

@@ -44,6 +44,33 @@ const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   margin: 0 25px;
 
+  &.page {
+    padding: 24px 0 28px;
+
+    @media screen and (min-width: 768px) {
+      padding: 40px 0 0;
+
+      h5 {
+        position: absolute;
+        left: 40px;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      h5 {
+        position: unset;
+        text-align: left;
+      }
+    }
+  }
+
+  &.home {
+    @media screen and (min-width: 1440px) {
+      padding: 0 160px;
+      margin: 0;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     margin: 0 95px;
   }
@@ -51,12 +78,43 @@ export const Container = styled.div`
   @media screen and (min-width: 1440px) {
     height: calc(100vh - 96px - 40px);
     margin: 0 160px;
+    overflow: hidden;
   }
 `;
 
 export const FlexCenter = css`
   display: flex;
   align-items: center;
+`;
+
+export const PageStyle = css`
+  justify-content: space-between;
+  ${FlexCenter};
+  flex-direction: column;
+  height: 100%;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
+`;
+
+export const spanH5 = css`
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: var(--h5-heading);
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
 `;
 
 export const MainHeading = styled.h1`
@@ -104,6 +162,7 @@ export const Heading3 = styled.h3`
 export const Heading4 = styled.h4`
   font-size: 16px;
   line-height: 18px;
+  opacity: 0.5;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
@@ -117,21 +176,13 @@ export const Heading4 = styled.h4`
 `;
 
 export const Heading5 = styled.h5`
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
+  ${spanH5};
 
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 3.375px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    font-size: var(--h5-heading);
-    line-height: 34px;
-    letter-spacing: 4.725px;
+  span {
+    ${spanH5};
+    font-weight: 700;
+    margin-right: 18px;
+    opacity: 0.25;
   }
 `;
 

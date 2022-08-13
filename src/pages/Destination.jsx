@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
 import Planets from "../components/Planets";
 import { Background } from "../styles/pages/DestinationStyle";
 
