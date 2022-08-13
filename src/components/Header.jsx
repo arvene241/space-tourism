@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { HeaderStyle, Logo, Menu, Nav } from "../styles/components/HeaderStyle";
-import logo from "../assets/shared/logo.svg";
-import menu from "../assets/shared/icon-hamburger.svg";
-import close from "../assets/shared/icon-close.svg";
+import logo from "/assets/shared/logo.svg";
+import menu from "/assets/shared/icon-hamburger.svg";
+import close from "/assets/shared/icon-close.svg";
 
 export default function Header(props) {
   const { active } = props;
