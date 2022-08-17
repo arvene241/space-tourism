@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { HeaderStyle, Logo, Menu, Nav } from "../styles/components/HeaderStyle";
@@ -11,6 +11,16 @@ export default function Header(props) {
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "unset";
+    }
+
+  }, [toggle])
+  
 
   return (
     <HeaderStyle>

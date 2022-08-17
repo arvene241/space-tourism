@@ -33,6 +33,7 @@ export const Head = styled.div`
     right: 0;
     width: 515px;
     margin: 0;
+    bottom: 0;
   }
 `;
 

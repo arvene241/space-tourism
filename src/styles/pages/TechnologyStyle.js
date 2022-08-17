@@ -4,8 +4,8 @@ export const Background = styled.div`
   background-image: url("/assets/technology/background-technology-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   position: relative;
+  min-height: 100vh;
 
   @media screen and (min-width: 768px) {
     background-image: url("/assets/technology/background-technology-tablet.jpg");

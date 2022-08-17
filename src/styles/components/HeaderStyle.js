@@ -63,6 +63,7 @@ export const Nav = styled.nav`
     display: block;
     transform: translateX(0px);
     z-index: 90;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 768px) {
